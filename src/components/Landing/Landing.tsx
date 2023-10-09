@@ -8,7 +8,8 @@ import "./Landing.scss";
 interface LandingProps {}
 
 const Landing: FC<LandingProps> = () => (
-  <div className="profile-card-container">
+  <div className="profile-card-container" id="home">
+    <p className="hi-p">Hi, I'm Santiago</p>
     <div className="profile-picture-container">
       <img src={prifilePick} alt="Profile" className="profile-picture" />
     </div>
@@ -17,10 +18,10 @@ const Landing: FC<LandingProps> = () => (
         <img src={githubIcon} alt="GitHub" className="icon" />
       </a>
       <a href="www.google.com" target="_blank" rel="noopener noreferrer">
-        <img src={linkedinIcon} alt="LinkedIn" className="icon" />
+        <img src={emailIcon} alt="Email" className="icon" />
       </a>
       <a href="www.google.com" target="_blank" rel="noopener noreferrer">
-        <img src={emailIcon} alt="Email" className="icon" />
+        <img src={linkedinIcon} alt="LinkedIn" className="icon" />
       </a>
     </div>
   </div>

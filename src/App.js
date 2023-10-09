@@ -1,28 +1,49 @@
-import "./App.css";
+import React, { useState } from "react";
+import "./App.scss";
 import About from "./components/About/About.tsx";
 import Landing from "./components/Landing/Landing.tsx";
 import Experience from "./components/Experience/Experience.tsx";
 import Projects from "./components/Projects/Projects.tsx";
+
 function App() {
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
+  const closeMenu = () => {
+    setMenuVisible(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header"></header>
-      <nav className="navbar">
-        <div className="logo">Logo</div>
-        <div className="menu">
-          <div className="menu-item">Home</div>
-          <div className="menu-item">About Me</div>
-          <div className="menu-item">Professional Career</div>
+      <header className="navbar">
+        <div className={`menu ${menuVisible ? "mobile" : ""}`}>
+          <div className="menu-item">
+            <a href="#home" onClick={closeMenu}>Home</a>
+          </div>
+          <div className="menu-item">
+            <a href="#about" onClick={closeMenu}>About Me</a>
+          </div>
+          <div className="menu-item">
+            <a href="#experience" onClick={closeMenu}>Career</a>
+          </div>
+          <div className="menu-item">
+            <a href="#projects" onClick={closeMenu}>Projects</a>
+          </div>
         </div>
-        <div className="hamburger-menu">&#9776;</div>
-      </nav>
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          &#9776;
+        </div>
+      </header>
       <section className="section-container">
         <Landing />
         <About />
         <Experience />
-        <Projects/>
+        <Projects />
       </section>
-      <footer></footer>
+      <footer>Footer</footer>
     </div>
   );
 }

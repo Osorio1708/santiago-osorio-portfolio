@@ -1,24 +1,14 @@
+.events-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
 .events-table {
   width: 100%;
   border-collapse: collapse;
-}
-
-.dot-cell {
-  width: 20px;
-  text-align: center;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: #007bff; /* Color del punto */
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.event-cell {
-  padding-left: 20px;
-  border-bottom: 1px solid #ccc;
+  
 }
 
 .date {
@@ -29,4 +19,13 @@
 .description {
   font-style: italic;
 }
+.event-cell{
+  margin: 20px;
+  padding: 20px;
+  display: block;
+}
   
+.head-table{
+  display: block;
+  margin: 40px;
+}

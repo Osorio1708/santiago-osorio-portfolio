@@ -16,34 +16,23 @@ const projects = [
   },
 ];
 
-
 interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = () => {
   return (
-    <div className="grid-container grid-container-single-colum">
+    <div className="grid-container " id="projects">
       <div className="projects-container">
-        <div className="column">
-          {projects
-            .slice(0, Math.ceil(projects.length / 2))
-            .map((project, index) => (
-              <div className="card" key={index}>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <a href={project.projectLink}><button>Go To</button></a>
-              </div>
-            ))}
-        </div>
-        <div className="column">
-          {projects
-            .slice(Math.ceil(projects.length / 2))
-            .map((project, index) => (
-              <div className="card" key={index}>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <a href={project.projectLink}><button>Go To</button></a>
-              </div>
-            ))}
+        <h1>Projects</h1>
+        <div className="cards-container">
+          {projects.map((project, index) => (
+            <div className="card" key={index}>
+              <h2>{project.title}</h2>
+              <p className="project-description">{project.description}</p>
+              <a href={project.projectLink} className="button-link">
+                <button className="button">Go To</button>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </div>
