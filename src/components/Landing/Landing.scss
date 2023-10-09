@@ -1,0 +1,33 @@
+.profile-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+ 
+
+  .profile-picture-container {
+    margin: 100px;
+    margin-bottom: 20px;
+    
+
+    .profile-picture {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+    }
+  }
+}
