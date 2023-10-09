@@ -1,11 +1,13 @@
 import React, { FC } from "react";
-import reactIcon from "../../assets/icons/react-icon.png";
-import sqlIcon from "../../assets/icons/sql-server-icon.png";
-import mongoIcon from "../../assets/icons/mongodb-icon.png";
-import netCoreIcon from "../../assets/icons/net-core-icon.png";
-import typeIcon from "../../assets/icons/typescript-icon.png";
-import expressIcon from "../../assets/icons/express-icon.png";
-import graphIcon from "../../assets/icons/graphql-icon.png";
+import reactIcon from "../../assets/icons/react-icon.svg";
+import sqlIcon from "../../assets/icons/sql-server-icon.svg";
+import mongoIcon from "../../assets/icons/mongodb-icon.svg";
+import netCoreIcon from "../../assets/icons/net-core-icon.svg";
+import typeIcon from "../../assets/icons/typescript-icon.svg";
+import expressIcon from "../../assets/icons/express-icon.svg";
+import graphIcon from "../../assets/icons/graphql-icon.svg";
+import splunkIcon from "../../assets/icons/splunk-icon.svg";
+import gitIcon from "../../assets/icons/git-icon.svg";
 import "./About.scss";
 
 interface AboutProps {}
@@ -40,6 +42,8 @@ const About: FC<AboutProps> = () => (
         <img src={sqlIcon} alt="SQL Server" className="tech-icon" />
         <img src={mongoIcon} alt="Mongo DB" className="tech-icon" />
         <img src={reactIcon} alt="React" className="tech-icon" />
+        <img src={splunkIcon} alt="Splunk" className="tech-icon" />
+        <img src={gitIcon} alt="Git" className="tech-icon" />
       </div>
     </div>
   </div>
