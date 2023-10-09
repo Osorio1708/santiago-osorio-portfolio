@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import githubIcon from "../../assets/icons/github-icon.png";
 import emailIcon from "../../assets/icons/linkedin-icon.png";
 import linkedinIcon from "../../assets/icons/email-icon.png";
-import prifilePick from "../../assets/images/programador.png";
+import prifilePick from "../../assets/images/profile.jpg";
 import "./Landing.scss";
 
 interface LandingProps {}

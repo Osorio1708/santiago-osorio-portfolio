@@ -14,16 +14,12 @@ const About: FC<AboutProps> = () => (
   <div className="grid-container double-grid-container about-container">
     <div className="profile">
       <h2>Professional Profile</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti delectus quisquam, facilis nobis vel quae 
-         voluptatibus velit ipsam debitis. Iure sint nemo perspiciatis placeat fuga corporis voluptas, nostrum distinctio! Atque.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti delectus quisquam, facilis nobis vel quae 
-         voluptatibus velit ipsam debitis. Iure sint nemo perspiciatis placeat fuga corporis voluptas, nostrum distinctio! Atque
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti delectus quisquam, facilis nobis vel quae 
-         voluptatibus velit ipsam debitis. Iure sint nemo perspiciatis placeat fuga corporis voluptas, nostrum distinctio! Atque
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti delectus quisquam, facilis nobis vel quae 
-         voluptatibus velit ipsam debitis. Iure sint nemo perspiciatis placeat fuga corporis voluptas, nostrum distinctio! Atque
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti delectus quisquam, facilis nobis vel quae 
-         voluptatibus velit ipsam debitis. Iure sint nemo perspiciatis placeat fuga corporis voluptas, nostrum distinctio! Atque</p>
+      <p> I am a dedicated software developer with a passion for crafting innovative and efficient solutions. 
+          I thrive in dynamic work environments, leveraging my adaptability to swiftly integrate into diverse teams. 
+          My technical expertise is complemented by excellent interpersonal skills, allowing me to collaborate 
+          seamlessly with colleagues and stakeholders. With a strong commitment to continuous learning, I embrace 
+          challenges and approach them with creativity and enthusiasm. I excel at transforming complex concepts 
+          into user-friendly applications and am driven by the desire to contribute positively to every project I undertake.</p>
     </div>
     <div className="technologies">
       <h2>Technologies Known</h2>
