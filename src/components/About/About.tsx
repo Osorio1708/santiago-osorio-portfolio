@@ -8,6 +8,7 @@ import expressIcon from "../../assets/icons/express-icon.svg";
 import graphIcon from "../../assets/icons/graphql-icon.svg";
 import splunkIcon from "../../assets/icons/splunk-icon.svg";
 import gitIcon from "../../assets/icons/git-icon.svg";
+import apolloIcon from "../../assets/icons/apollo-server-icon.svg";
 import "./About.scss";
 
 interface AboutProps {}
@@ -15,7 +16,7 @@ interface AboutProps {}
 const About: FC<AboutProps> = () => (
   <div className="grid-container about-container" id="about">
     <div className="profile">
-      <h2>Professional Profile</h2>
+      <h1>Professional Profile</h1>
       <div className="content">
         <p>
           I am a dedicated software developer with a passion for crafting
@@ -32,7 +33,7 @@ const About: FC<AboutProps> = () => (
       </div>
     </div>
     <div className="technologies">
-      <h2>Technologies Known</h2>
+      <h1>Technologies Known</h1>
       <br></br>
       <div className="tech-icons">
         <img src={typeIcon} alt="TypeScript" className="tech-icon" />
@@ -44,6 +45,7 @@ const About: FC<AboutProps> = () => (
         <img src={reactIcon} alt="React" className="tech-icon" />
         <img src={splunkIcon} alt="Splunk" className="tech-icon" />
         <img src={gitIcon} alt="Git" className="tech-icon" />
+        <img src={apolloIcon} alt="Apollo Server" className="tech-icon" />
       </div>
     </div>
   </div>

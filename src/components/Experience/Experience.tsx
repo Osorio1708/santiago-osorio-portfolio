@@ -5,29 +5,39 @@ interface ExperienceProps {}
 
 const events = [
   {
-    date: "2021-05-15",
+    dateStart: "January 2016",
+    dateEnd: "June 2021",
     description: "Instituto Tecnologico Metropolitano",
     degree: "System Technologist",
   },
   {
-    date: "2021-06-01",
-    description: "RPA Developer",
-    company: "Tata Consultancy Services - Bancolombiiia",
+    dateStart: "February 2021",
+    dateEnd: "October 2021",
+    rol: "RPA Developer",
+    description: "Tata Consultancy Services - Bancolombia",
   },
   {
-    date: "2021-10-01",
-    description: "Full Stack Developer",
-    company: "Xpert Group - Puntos Colombia",
+    dateStart: "October 2021",
+    dateEnd: "July 2022",
+    rol: "Full Stack Developer",
+    description: "Xpert Group - Puntos Colombia",
   },
   {
-    date: "2022-04-01",
+    dateStart: "August 2021",
     description: "Platzi",
     degree: "BackEnd with NodeJS",
   },
   {
-    date: "2022-06-25",
-    description: "NodeJS Developer",
-    company: "Zemoga - Walmart",
+    dateStart: "July 2022",
+    dateEnd: "October 2023",
+    rol: "NodeJS Developer",
+    description: "Zemoga - Walmart",
+  },
+  {
+    dateStart: "October 2023",
+    description: "Apollo ODYSSEY",
+    degree: "Graph Developer - Professional",
+    link: "https://www.apollographql.com/tutorials/certifications/9592c9b9-7834-4250-b218-e21d0c2b5419",
   },
 ];
 
@@ -43,13 +53,20 @@ const Experience: FC<ExperienceProps> = () => {
             {events.map((event, index) => (
               <tr key={index}>
                 <td className="event-cell">
-                  <div className="date">{event.date}</div>
+                  <div className="date">
+                    {event.dateEnd
+                      ? `${event.dateStart} - ${event.dateEnd}`
+                      : event.dateStart}
+                  </div>
                   <div className="description">{event.description}</div>
-                  {event.degree && (
-                    <div className="degree">Degree: {event.degree}</div>
+                  {event.rol && (
+                    <div className="rol">{event.rol}</div>
                   )}
-                  {event.company && (
-                    <div className="company">Company: {event.company}</div>
+                  {event.degree && <div className="degree">{event.degree}</div>}
+                  {event.link && (
+                    <a href={event.link} className="event-link">
+                      Certification
+                    </a>
                   )}
                 </td>
               </tr>

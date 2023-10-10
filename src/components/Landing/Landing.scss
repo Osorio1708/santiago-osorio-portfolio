@@ -39,11 +39,19 @@
 
     /* Aplica el efecto de crecimiento al pasar el mouse sobre el icono */
     .icon:hover {
-      transform: scale(1.2);
+      transform: scale(2);
     }
   }
   .hi-p{
     font-size: 40px;
+    font-weight: bold;
+    margin:0px;
+  }
+  .hi-p-2{
+    font-size: 20px;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
     font-weight: bold;
   }
 }

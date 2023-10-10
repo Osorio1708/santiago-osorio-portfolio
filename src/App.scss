@@ -4,7 +4,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Fira Code", monospace;
 }
 
 /* Estilos del navbar */
@@ -93,7 +92,7 @@ body {
   grid-gap: 20px;
   padding: 20px;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .double-grid-container {
@@ -104,12 +103,3 @@ body {
   grid-template-columns: 1fr;
 }
 
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}

@@ -43,7 +43,6 @@ function App() {
         <Experience />
         <Projects />
       </section>
-      <footer>Footer</footer>
     </div>
   );
 }
