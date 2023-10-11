@@ -15,21 +15,25 @@ const Landing: FC<LandingProps> = () => {
   const copyToClipboard = () => {
     if (emailRef.current) {
       emailRef.current.select();
-      document.execCommand('copy');
+      document.execCommand("copy");
     }
-    alert('Email was copied on clipboard');
+    alert("Email was copied on clipboard");
   };
 
   return (
-    <div className="profile-card-container" id="home">
-      <p className="hi-p">Hi, I'm Santiago</p>
-      <p className="hi-p-2">Are you looking for a software developer?</p>
-      <div className="profile-picture-container">
-        <img src={prifilePick} alt="Profile" className="profile-picture" />
+    <div id="home">
+      <p>Hi, I'm Santiago</p>
+      <p>Are you looking for a software developer?</p>
+      <div>
+        <img src={prifilePick} alt="Profile" />
       </div>
-      <div className="social-icons">
-        <a href="https://github.com/Osorio1708" target="_blank" rel="noopener noreferrer">
-          <img src={githubIcon} alt="GitHub" className="icon" />
+      <div>
+        <a
+          href="https://github.com/Osorio1708"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={githubIcon} alt="GitHub" />
         </a>
         <input
           ref={emailRef}
@@ -40,8 +44,7 @@ const Landing: FC<LandingProps> = () => {
         <img
           src={emailIcon}
           alt="Email"
-          className="icon"
-          onClick={copyToClipboard} 
+          onClick={copyToClipboard}
           style={{ cursor: "pointer" }}
         />
         <a
@@ -49,15 +52,10 @@ const Landing: FC<LandingProps> = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={linkedinIcon} alt="LinkedIn" className="icon" />
+          <img src={linkedinIcon} alt="LinkedIn" />
         </a>
         <a href={cvDoc}>
-        <img 
-          src={cvIcon}
-          alt="CV"
-          className="icon"
-          style={{ cursor: "pointer" }}
-        />
+          <img src={cvIcon} alt="CV" style={{ cursor: "pointer" }} />
         </a>
       </div>
     </div>

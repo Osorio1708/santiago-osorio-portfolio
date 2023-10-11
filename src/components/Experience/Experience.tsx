@@ -43,31 +43,25 @@ const events = [
 
 const Experience: FC<ExperienceProps> = () => {
   return (
-    <div className="grid-container grid-template-columns" id="experience">
-      <div className="events-container">
-        <table className="events-table">
-          <thead className="head-table">
+    <div id="experience">
+      <div>
+        <table>
+          <thead>
             <h1>Professional Carrer</h1>
           </thead>
           <tbody>
             {events.map((event, index) => (
               <tr key={index}>
-                <td className="event-cell">
-                  <div className="date">
+                <td>
+                  <div>
                     {event.dateEnd
                       ? `${event.dateStart} - ${event.dateEnd}`
                       : event.dateStart}
                   </div>
-                  <div className="description">{event.description}</div>
-                  {event.rol && (
-                    <div className="rol">{event.rol}</div>
-                  )}
-                  {event.degree && <div className="degree">{event.degree}</div>}
-                  {event.link && (
-                    <a href={event.link} className="event-link">
-                      Certification
-                    </a>
-                  )}
+                  <div>{event.description}</div>
+                  {event.rol && <div>{event.rol}</div>}
+                  {event.degree && <div>{event.degree}</div>}
+                  {event.link && <a href={event.link}>Certification</a>}
                 </td>
               </tr>
             ))}

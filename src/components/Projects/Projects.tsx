@@ -22,8 +22,6 @@ const projects = [
       { technology: "SQL", imageUrl: sqlIcon },
       { technology: "Splunk", imageUrl: splunkIcon },
       { technology: "Git", imageUrl: gitIcon },
-      
-      
     ],
   },
   {
@@ -44,26 +42,25 @@ interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = () => {
   return (
-    <div className="grid-container " id="projects">
-      <div className="projects-container">
+    <div id="projects">
+      <div>
         <h1>Projects</h1>
-        <div className="cards-container">
+        <div>
           {projects.map((project, index) => (
-            <div className="card" key={index}>
+            <div key={index}>
               <h2>{project.title}</h2>
-              <p className="project-description">{project.description}</p>
-              <div className="technologies-list">
+              <p>{project.description}</p>
+              <div>
                 {project.technologies.map((tech, techIndex) => (
                   <img
                     key={techIndex}
                     src={tech.imageUrl}
                     alt={tech.technology}
-                    className="technology-icon"
                   />
                 ))}
               </div>
-              <a href={project.projectLink} className="button-link">
-                <button className="button">{'Go to ' + project.title}</button>
+              <a href={project.projectLink}>
+                <button>{"Go to " + project.title}</button>
               </a>
             </div>
           ))}

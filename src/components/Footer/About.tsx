@@ -14,10 +14,10 @@ import "./About.scss";
 interface AboutProps {}
 
 const About: FC<AboutProps> = () => (
-  <div id="about">
-    <div>
+  <div  id="about">
+    <div >
       <h1>Professional Profile</h1>
-      <div>
+      <div >
         <p>
           I am a dedicated software developer with a passion for crafting
           innovative and efficient solutions. I thrive in dynamic work
@@ -32,20 +32,20 @@ const About: FC<AboutProps> = () => (
         </p>
       </div>
     </div>
-    <div>
+    <div >
       <h1>Technologies Known</h1>
       <br></br>
-      <div>
-        <img src={typeIcon} alt="TypeScript" />
-        <img src={expressIcon} alt="Express.js" />
-        <img src={netCoreIcon} alt=".Net Core" />
-        <img src={graphIcon} alt="GraphQL" />
-        <img src={sqlIcon} alt="SQL Server" />
-        <img src={mongoIcon} alt="Mongo DB" />
-        <img src={reactIcon} alt="React" />
-        <img src={splunkIcon} alt="Splunk" />
-        <img src={gitIcon} alt="Git" />
-        <img src={apolloIcon} alt="Apollo Server" />
+      <div >
+        <img src={typeIcon} alt="TypeScript"  />
+        <img src={expressIcon} alt="Express.js"  />
+        <img src={netCoreIcon} alt=".Net Core"  />
+        <img src={graphIcon} alt="GraphQL"  />
+        <img src={sqlIcon} alt="SQL Server"  />
+        <img src={mongoIcon} alt="Mongo DB"  />
+        <img src={reactIcon} alt="React"  />
+        <img src={splunkIcon} alt="Splunk"  />
+        <img src={gitIcon} alt="Git"  />
+        <img src={apolloIcon} alt="Apollo Server"  />
       </div>
     </div>
   </div>
