@@ -1,10 +1,9 @@
 import React, { FC, useRef } from "react";
-import githubIcon from "../../assets/icons/github-icon.png";
-import linkedinIcon from "../../assets/icons/linkedin-icon.png";
-import emailIcon from "../../assets/icons/email-icon.png";
-import cvIcon from "../../assets/icons/cv-icon.png";
 import prifilePick from "../../assets/images/profile.jpg";
-import cvDoc from "../../assets/docs/cv.pdf";
+import githubIcon from "../../assets/icons/github-icon-2.png";
+import linkedinIcon from "../../assets/icons/linkedin-icon-3.png";
+import emailIcon from "../../assets/icons/email-icon-2.png";
+import cvIcon from "../../assets/icons/cv-icon-2.png";
 import "./Landing.scss";
 
 interface LandingProps {}
@@ -17,45 +16,56 @@ const Landing: FC<LandingProps> = () => {
       emailRef.current.select();
       document.execCommand("copy");
     }
-    alert("Email was copied on clipboard");
+    alert("Email is: osorio1708@gmail.com \nEmail was copied on clipboard");
   };
-
   return (
-    <div id="home">
-      <p>Hi, I'm Santiago</p>
-      <p>Are you looking for a software developer?</p>
-      <div>
-        <img src={prifilePick} alt="Profile" />
+    <div className="landing_container" id="home">
+      <div className="landing_profile_text">
+        <h1>Hi, I'm Santiago</h1>
+        <p>
+          {"<"}BackEnd Developer{"/>"}
+        </p>
+        <p>
+          {"<"}FullStack Developer{"/>"}
+        </p>
       </div>
       <div>
-        <a
-          href="https://github.com/Osorio1708"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={githubIcon} alt="GitHub" />
-        </a>
-        <input
-          ref={emailRef}
-          type="text"
-          defaultValue="osorio1708@gmail.com"
-          style={{ position: "absolute", left: "-9999px" }}
-        />
         <img
-          src={emailIcon}
-          alt="Email"
-          onClick={copyToClipboard}
-          style={{ cursor: "pointer" }}
+          className="landing_profile_image"
+          src={prifilePick}
+          alt="Profile"
         />
+      </div>
+      <div className="social_icons">
         <a
           href="https://www.linkedin.com/in/osorio1708"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={linkedinIcon} alt="LinkedIn" />
+          <img src={linkedinIcon} alt="Profile" />
         </a>
-        <a href={cvDoc}>
-          <img src={cvIcon} alt="CV" style={{ cursor: "pointer" }} />
+        <a
+          href="https://github.com/Osorio1708"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={githubIcon} alt="Profile" />
+        </a>
+        <div>
+          <img
+            src={emailIcon}
+            alt="Email"
+            onClick={copyToClipboard}
+            style={{ cursor: "pointer" }}
+          />
+        </div>
+
+        <a href="">
+          <img
+            src={cvIcon}
+            onClick={() => alert("It'll be available soon")}
+            alt="Profile"
+          />
         </a>
       </div>
     </div>
