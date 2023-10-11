@@ -15,7 +15,7 @@ const Navbar: FC<NavbarProps> = () => {
   };
 
   return (
-    <div>
+    <div className="navbar_container">
       <header>
         <div>
           <div>

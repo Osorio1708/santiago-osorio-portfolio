@@ -9,9 +9,24 @@ import graphIcon from "../../assets/icons/graphql-icon.svg";
 import splunkIcon from "../../assets/icons/splunk-icon.svg";
 import gitIcon from "../../assets/icons/git-icon.svg";
 import apolloIcon from "../../assets/icons/apollo-server-icon.svg";
+import githubIcon from "../../assets/icons/github-icon.png";
+import linkedinIcon from "../../assets/icons/linkedin-icon.png";
+import emailIcon from "../../assets/icons/email-icon.png";
+import cvIcon from "../../assets/icons/cv-icon.png";
+import cvDoc from "../../assets/docs/cv.pdf";
 import "./About.scss";
 
 interface AboutProps {}
+
+const emailRef = useRef<HTMLInputElement>(null);
+
+const copyToClipboard = () => {
+  if (emailRef.current) {
+    emailRef.current.select();
+    document.execCommand("copy");
+  }
+  alert("Email was copied on clipboard");
+};
 
 const About: FC<AboutProps> = () => (
   <div  id="about">
@@ -48,7 +63,39 @@ const About: FC<AboutProps> = () => (
         <img src={apolloIcon} alt="Apollo Server"  />
       </div>
     </div>
+    <div className="landing_">
+<a
+  href="https://github.com/Osorio1708"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img src={githubIcon} alt="GitHub" />
+</a>
+<input
+  ref={emailRef}
+  type="text"
+  defaultValue="osorio1708@gmail.com"
+  style={{ position: "absolute", left: "-9999px" }}
+/>
+<img
+  src={emailIcon}
+  alt="Email"
+  onClick={copyToClipboard}
+  style={{ cursor: "pointer" }}
+/>
+<a
+  href="https://www.linkedin.com/in/osorio1708"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img src={linkedinIcon} alt="LinkedIn" />
+</a>
+<a href={cvDoc}>
+  <img src={cvIcon} alt="CV" style={{ cursor: "pointer" }} />
+</a>
+</div>
   </div>
 );
 
 export default About;
+
