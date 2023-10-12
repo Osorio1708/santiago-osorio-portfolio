@@ -34,6 +34,13 @@ const events = [
     type: 1,
   },
   {
+    dateStart: "April 2022",
+    description: "EF SET English Test",
+    degree: "C2 Proficient",
+    link:"https://www.efset.org/cert/MDaNgA",
+    type: 1,
+  },
+  {
     dateStart: "July 2022",
     dateEnd: "October 2023",
     rol: "NodeJS Developer",
