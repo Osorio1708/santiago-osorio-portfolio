@@ -8,7 +8,7 @@ const Projects: FC<ProjectsProps> = () => {
   return (
     <div className="projects_container" id="projects">
       <h1>Projects</h1>
-      <div>
+      <div className="projects_box_container" >
         {ProjectsList.map((project, index) => (
           <div className="project_container" key={index}>
             <h2>{project.title}</h2>
