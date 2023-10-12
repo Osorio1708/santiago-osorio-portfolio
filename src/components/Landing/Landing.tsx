@@ -9,15 +9,16 @@ import "./Landing.scss";
 interface LandingProps {}
 
 const Landing: FC<LandingProps> = () => {
-  const emailRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement | null>(null);
 
   const copyToClipboard = () => {
     if (emailRef.current) {
       emailRef.current.select();
       document.execCommand("copy");
+      alert("Email is: osorio1708@gmail.com \nEmail was copied to clipboard");
     }
-    alert("Email is: osorio1708@gmail.com \nEmail was copied on clipboard");
   };
+
   return (
     <div className="landing_container" id="home">
       <div className="landing_profile_text">
@@ -51,16 +52,21 @@ const Landing: FC<LandingProps> = () => {
         >
           <img src={githubIcon} alt="Profile" />
         </a>
-        <div>
+        <div style={{ position: "relative" }}>
           <img
             src={emailIcon}
             alt="Email"
             onClick={copyToClipboard}
             style={{ cursor: "pointer" }}
           />
+          <input
+            type="text"
+            ref={emailRef}
+            style={{ position: "absolute", left: "-9999px" }}
+            defaultValue="osorio1708@gmail.com"
+          />
         </div>
-
-        <a href="">
+        <a href="#home">
           <img
             src={cvIcon}
             onClick={() => alert("It'll be available soon")}
