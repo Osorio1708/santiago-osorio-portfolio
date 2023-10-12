@@ -4,6 +4,7 @@ import githubIcon from "../../assets/icons/github-icon-2.png";
 import linkedinIcon from "../../assets/icons/linkedin-icon-3.png";
 import emailIcon from "../../assets/icons/email-icon-2.png";
 import cvIcon from "../../assets/icons/cv-icon-2.png";
+import cvPDF from "../../assets/docs/santiago_osorio_cv.pdf"; 
 import "./Landing.scss";
 
 interface LandingProps {}
@@ -17,6 +18,10 @@ const Landing: FC<LandingProps> = () => {
       document.execCommand("copy");
       alert("Email is: osorio1708@gmail.com \nEmail was copied to clipboard");
     }
+  };
+
+  const openPDF = () => {
+    window.open(cvPDF); // Abre el archivo PDF en una nueva ventana del navegador
   };
 
   return (
@@ -67,12 +72,12 @@ const Landing: FC<LandingProps> = () => {
           />
         </div>
         <a href="#home">
-          <img
-            src={cvIcon}
-            onClick={() => alert("It'll be available soon")}
-            alt="Profile"
-          />
-        </a>
+        <img
+          src={cvIcon}
+          onClick={openPDF}  // Llama a la función openPDF cuando se hace clic en el icono del CV
+          alt="Profile"
+        />
+      </a>
       </div>
     </div>
   );

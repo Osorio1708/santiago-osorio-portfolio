@@ -20,18 +20,13 @@ const About: FC<AboutProps> = () => (
   <div className="about_container" id="about">
     <div>
       <h1>Professional Profile</h1>
-      <div>
+      <div className="professional_text">
         <p>
-          I am a dedicated software developer with a passion for crafting
-          innovative and efficient solutions. I thrive in dynamic work
-          environments, leveraging my adaptability to swiftly integrate into
-          diverse teams. My technical expertise is complemented by excellent
-          interpersonal skills, allowing me to collaborate seamlessly with
-          colleagues and stakeholders. With a strong commitment to continuous
-          learning, I embrace challenges and approach them with creativity and
-          enthusiasm. I excel at transforming complex concepts into
-          user-friendly applications and am driven by the desire to contribute
-          positively to every project I undertake.
+        I'm a dedicated software developer passionate about crafting innovative solutions. 
+        Thrive in dynamic environments, and adapt well to diverse teams: technical expertise, 
+        excellent interpersonal skills, seamless collaboration with colleagues and stakeholders. 
+        I am committed to continuous learning, a creative problem solver, excelling in user-friendly 
+        applications, and driven to contribute positively to every project.
         </p>
       </div>
     </div>
