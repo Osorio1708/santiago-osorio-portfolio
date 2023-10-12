@@ -60,7 +60,7 @@ const Landing: FC<LandingProps> = () => {
           />
         </div>
 
-        <a href="#">
+        <a href="#home">
           <img
             src={cvIcon}
             onClick={() => alert("It'll be available soon")}
