@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import "./Experience.scss";
-import jobICon from "../../assets/icons/job-icon.png";
-import studentIcon from "../../assets/icons/student-icon.png";
+import jobICon from "../../assets/icons/job-icon-2.png";
+import studentIcon from "../../assets/icons/student-icon-4.png";
 
 interface ExperienceProps {}
 
@@ -53,31 +53,33 @@ const Experience: FC<ExperienceProps> = () => {
   return (
     <div className="experience_container" id="experience">
       <h1>Professional Carrer</h1>
-      {events.map((event, index) => (
-        <div className="experience_event_container">
-          <div className="img_container">
-            <img
-              src={event.type === 0 ? jobICon : studentIcon}
-              alt={event.type === 0 ? "Job Icon" : "Student Icon"}
-            />
+      <div className="experience_events_container">
+        {events.map((event, index) => (
+          <div className="experience_event_container">
+            <div className="img_container">
+              <img
+                src={event.type === 0 ? jobICon : studentIcon}
+                alt={event.type === 0 ? "Job Icon" : "Student Icon"}
+              />
+            </div>
+            <div className="p_text">
+              <p className="p_date">
+                {event.dateEnd
+                  ? `${event.dateStart} - ${event.dateEnd}`
+                  : event.dateStart}
+              </p>
+              <p>{event.description}</p>
+              {event.rol && <p>{event.rol}</p>}
+              {event.degree && <p>{event.degree}</p>}
+              {event.link && (
+                <a href={event.link}>
+                  <p>Certification</p>
+                </a>
+              )}
+            </div>
           </div>
-          <div className="p_text">
-            <p className="p_date">
-              {event.dateEnd
-                ? `${event.dateStart} - ${event.dateEnd}`
-                : event.dateStart}
-            </p>
-            <p>{event.description}</p>
-            {event.rol && <p>{event.rol}</p>}
-            {event.degree && <p>{event.degree}</p>}
-            {event.link && (
-              <a href={event.link}>
-                <p>Certification</p>
-              </a>
-            )}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
