@@ -9,15 +9,18 @@ import graphIcon from "../../assets/icons/graphql-icon.svg";
 import splunkIcon from "../../assets/icons/splunk-icon.svg";
 import gitIcon from "../../assets/icons/git-icon.svg";
 import apolloIcon from "../../assets/icons/apollo-server-icon.svg";
+import dockerIcon from "../../assets/icons/docker-icon.svg";
+import jenkinsIcon from "../../assets/icons/jenkins-icon.svg";
+import azureIcon from "../../assets/icons/azure-icon.svg";
 import "./About.scss";
 
 interface AboutProps {}
 
 const About: FC<AboutProps> = () => (
-  <div className="grid-container about-container" id="about">
-    <div className="profile">
+  <div className="about_container" id="about">
+    <div>
       <h1>Professional Profile</h1>
-      <div className="content">
+      <div>
         <p>
           I am a dedicated software developer with a passion for crafting
           innovative and efficient solutions. I thrive in dynamic work
@@ -32,20 +35,62 @@ const About: FC<AboutProps> = () => (
         </p>
       </div>
     </div>
-    <div className="technologies">
+    <div>
       <h1>Technologies Known</h1>
       <br></br>
-      <div className="tech-icons">
-        <img src={typeIcon} alt="TypeScript" className="tech-icon" />
-        <img src={expressIcon} alt="Express.js" className="tech-icon" />
-        <img src={netCoreIcon} alt=".Net Core" className="tech-icon" />
-        <img src={graphIcon} alt="GraphQL" className="tech-icon" />
-        <img src={sqlIcon} alt="SQL Server" className="tech-icon" />
-        <img src={mongoIcon} alt="Mongo DB" className="tech-icon" />
-        <img src={reactIcon} alt="React" className="tech-icon" />
-        <img src={splunkIcon} alt="Splunk" className="tech-icon" />
-        <img src={gitIcon} alt="Git" className="tech-icon" />
-        <img src={apolloIcon} alt="Apollo Server" className="tech-icon" />
+      <div className="about_skills_container">
+        <div className="about_skill_container">
+          <img src={typeIcon} alt="TypeScript" />
+          <p>Typescript</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={expressIcon} alt="Express.js" />
+          <p>Express.js</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={netCoreIcon} alt=".Net Core" />
+          <p>.Net Core</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={graphIcon} alt="GraphQL" />
+          <p>GraphQL</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={sqlIcon} alt="SQL Server" />
+          <p>SQL Server</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={mongoIcon} alt="Mongo DB" />
+          <p>Mongo DB</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={reactIcon} alt="React" />
+          <p>React</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={dockerIcon} alt="Docker" />
+          <p>Docker</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={azureIcon} alt="Azure" />
+          <p>Azure</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={jenkinsIcon} alt="Jenkins" />
+          <p>Jenkins</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={splunkIcon} alt="Splunk" />
+          <p>Splunk</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={gitIcon} alt="Git" />
+          <p>Git</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={apolloIcon} alt="Apollo Server" />
+          <p>Apollo Server</p>
+        </div>
       </div>
     </div>
   </div>
