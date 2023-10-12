@@ -1,71 +1,42 @@
-.cards-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-  justify-content: center; // Para centrar las tarjetas horizontalmente
-
-  .card {
-    height: 100%; // Todas las tarjetas tendrán la misma altura
+.projects_container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-
-  .project-description {
-    font-size: 1rem;
-    color: #333;
-    text-align: left;
-  }
-
-  .technologies-list {
+    min-height: 100vh;
+    h1{
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+.project_container{
+    margin: 20px;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-
-    .technology-icon {
-      width: 50px; // Establece el tamaño fijo para las imágenes de tecnologías
-      height: auto;
-      margin-right: 10px; // Agrega un margen entre las imágenes
+    flex-direction: column;
+    background-color: #E6EBE0;
+    h2{
+        margin: 10px;
+        font-size: 1.6rem;
     }
-  }
-
-  .button-link {
-    text-decoration: none;
-  }
-
-  .button {
-    font-size: 1rem;
-    padding: 10px 40px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #0056b3;
+    p{
+        font-size: 1.4rem;
     }
-  }
 }
 
-@media (max-width: 768px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-    grid-gap: 100px;
-  }
+.technologies_project_container{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    img{
+        width: 40px;
+        height: 40px;
+    }
 }
 
-.projects-container {
-  h1 {
-    margin: 60px;
-  }
+.skills_project_container{
+    margin:20px;
+    font-size: 1.4rem;
 }

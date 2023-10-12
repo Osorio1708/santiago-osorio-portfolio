@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat:wght@500&display=swap');
-html {
-  scroll-behavior: smooth;
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+html {
+  font-size: 62.5%;
   font-family: "Montserrat", "Fira Code", monospace;
 }
 
-h1{
-  font-size: 35px;
-}

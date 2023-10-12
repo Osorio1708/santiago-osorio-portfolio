@@ -1,105 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
-/* Estilos generales */
-body {
-  margin: 0;
-  padding: 0;
-}
+$small-screen: 768px;
+$medium-screen: 1024px;
+$large-screen: 1200px;
 
-/* Estilos del navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-}
-
-.menu-item {
-  a{
-    text-decoration: none;
-    color: white;
-  }
-  margin: 0 15px;
-  cursor: pointer;
-  text-decoration: none;
-  color: white; /* Cambiar el color del texto a blanco */
-  transition: color 0.3s ease; /* Agregar transición para el cambio de color */
-}
-
-.menu-item:hover {
-  color: #007bff; /* Cambiar el color del texto al hacer hover */
-  text-decoration: none;
-}
-
-.hamburger-menu {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .menu.mobile {
+.App{
+    height: 100vh; /* Altura del contenedor para ocupar la altura completa de la ventana */
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: #333;
     align-items: center;
-    justify-content: center;
-    z-index: 999;
+    overflow-y: scroll; /* Hacer que el contenedor tenga scroll vertical */
+    scroll-snap-type: y mandatory; 
+    width: 100vw;
+    height: 100%;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+
+@media screen and (min-width: ($small-screen + 1)) and (max-width: $medium-screen) {
+    .about_container,
+    .projects_container,
+    .experience_container{
+        width: 60%;
   }
-
-  .menu-item {
-    margin: 15px 0;
+  .about_skills_container{
+    grid-template-columns: repeat(4,1fr) !important;
   }
 }
 
-/* Resto de tus estilos */
-.section-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-  margin-top: 50px;
+@media screen and (min-width: ($medium-screen + 1)) and (max-width: $large-screen) {
+    .about_container,
+    .projects_container,
+    .experience_container{
+        width: 60%;
+  }
+  .about_skills_container{
+    grid-template-columns: repeat(5,1fr) !important;
+  }
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-  text-align: center;
-  min-height: 100vh;
+@media screen and (min-width: $large-screen) {
+    .about_container,
+    .projects_container,
+    .experience_container{
+        width: 60%;
+  }
+  .about_skills_container{
+    grid-template-columns: repeat(5,1fr) !important;
+  }
 }
-
-.double-grid-container {
-  grid-template-columns: 1fr 1fr;
-}
-
-.grid-container-single-column {
-  grid-template-columns: 1fr;
-}
-

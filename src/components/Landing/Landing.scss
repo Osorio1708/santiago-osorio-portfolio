@@ -1,57 +1,28 @@
-.profile-card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 90vh;
-
-  .profile-picture-container {
-    margin: 40px;
-
-    .profile-picture {
-      width: 325px;
-      height: 325px;
-      object-fit: cover;
-      border-radius: 50%;
-
-      /* Transición para el efecto de crecimiento */
-      transition: transform 0.3s ease-in-out;
-    }
-  }
-
-  .social-icons {
+.landing_container{
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 30px;
+    align-items: center ;
+    width: 100%;
+    height: 1000px;
+    min-width: 324px;
+    text-align: center;
+    scroll-snap-align: start;
+}
 
-    .icon {
-      width: 50px;
-      height: 50px;
-      margin: 0 20px;
-
-      /* Transición para el efecto de crecimiento */
-      transition: transform 0.3s ease-in-out;
-
-      /* Establece el punto de transformación en el centro del icono */
-      transform-origin: center center;
+.landing_profile_text{
+    width: 90%;
+    margin-bottom: 50px;
+    p{
+        margin: 2px;
+        font-size: 1.5rem;
     }
-
-    /* Aplica el efecto de crecimiento al pasar el mouse sobre el icono */
-    .icon:hover {
-      transform: scale(2);
+    strong{
+        font-size: 2rem;
     }
-  }
-  .hi-p{
-    font-size: 40px;
-    font-weight: bold;
-    margin:0px;
-  }
-  .hi-p-2{
-    font-size: 20px;
-    margin: 0px;
-    margin-top: 10px;
-    padding: 0px;
-    font-weight: bold;
-  }
+}
+
+.landing_profile_image{
+    width: 200px;
 }
