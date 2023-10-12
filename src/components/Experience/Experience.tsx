@@ -57,8 +57,8 @@ const Experience: FC<ExperienceProps> = () => {
         <div className="experience_event_container">
           <div className="img_container">
             <img
-              src={event.type == 0 ? jobICon : studentIcon}
-              alt={event.type == 0 ? "Job Icon" : "Student Icon"}
+              src={event.type === 0 ? jobICon : studentIcon}
+              alt={event.type === 0 ? "Job Icon" : "Student Icon"}
             />
           </div>
           <div className="p_text">
