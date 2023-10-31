@@ -12,6 +12,7 @@ import apolloIcon from "../../assets/icons/apollo-server-icon.svg";
 import dockerIcon from "../../assets/icons/docker-icon.svg";
 import jenkinsIcon from "../../assets/icons/jenkins-icon.svg";
 import azureIcon from "../../assets/icons/azure-icon.svg";
+import springIcon from "../../assets/icons/spring-boot-icon.svg";
 import "./About.scss";
 
 interface AboutProps {}
@@ -49,6 +50,10 @@ const About: FC<AboutProps> = () => (
         <div className="about_skill_container">
           <img src={graphIcon} alt="GraphQL" />
           <p>GraphQL</p>
+        </div>
+        <div className="about_skill_container">
+          <img src={springIcon} alt="Spring boot" />
+          <p>Spring boot</p>
         </div>
         <div className="about_skill_container">
           <img src={sqlIcon} alt="SQL Server" />

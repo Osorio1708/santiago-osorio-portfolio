@@ -4,7 +4,7 @@ import githubIcon from "../../assets/icons/github-icon-2.png";
 import linkedinIcon from "../../assets/icons/linkedin-icon-3.png";
 import emailIcon from "../../assets/icons/email-icon-2.png";
 import cvIcon from "../../assets/icons/cv-icon-2.png";
-import cvPDF from "../../assets/docs/santiago_osorio_cv.pdf"; 
+import cvPDF from "../../assets/docs/santiago_osorio_quintero.pdf"; 
 import "./Landing.scss";
 
 interface LandingProps {}
